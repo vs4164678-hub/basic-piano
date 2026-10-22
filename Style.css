@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color:  rgb(200, 248, 249);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+}
+
+.teclado{
+    border-radius: 20px;
+    padding: 35px 40px;
+    background: #5c2264;
+}
+
+header h2{
+    font-size: 1.6rem;
+}
+
+header .column{
+    display: flex;
+    align-items: center;
+}
+
+header .column span{
+    font-weight: 500;
+    margin-right: 15xp;
+    font-size: 1.19rem;
+}
+
+.controle-volume input{
+    outline: none;
+    accent-color: #fff;
+}
+
+.teclas-checkbox input{
+    width: 60xp;
+    height: 30xp;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    border-radius: 30px;
+    background: #e6e6e6;
+}
+
+.teclas-checkbox input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 5px;
+    border-radius: inherit;
+    position: absolute;
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.teclas-checkbox input:checked::before{
+    left: 35px;
+    background: #fff;
+}
+
+.piano-teclas{
+    display: flex;
+    margin-top: 40px;
+}
+
+.piano-teclas .tecla {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    color: #e7dddd;
+    position: relative;
+    text-transform: uppercase;
+}
+.piano-teclas .tecla ocultar span{
+    display:none;
+}
+
+.piano-teclas .branca{
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    background: linear-gradient(#fff 96%, #eee 1%);
+}
+
+.piano-teclas .branca.pressionada{
+    box-shadow: inset -5px 5px 10px rgba(205, 190, 190, 0.1);
+    background: linear-gradient(to bottom, #fff 0%);
+}
+
+.piano-teclas .preta{
+   width: 44px;
+   height: 140px;
+   border-radius: 0 0 5px 5px;
+   z-index: 2;
+   margin: 0 -22px 0 -22px;
+   background: linear-gradient(#333, #000);
+}
+
+.piano-teclas .preta.pressionada{
+     box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-teclas span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.13rem;
+    text-align: center;
+}
+
